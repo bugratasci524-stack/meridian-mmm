@@ -1,2 +1,3 @@
 google-meridian[schema]==2.1.0
 ipykernel
+openpyxl
