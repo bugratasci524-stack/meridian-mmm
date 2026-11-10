@@ -18,7 +18,7 @@ from meridian.analysis.review import reviewer
 from meridian.schema.serde import meridian_serde
 
 DATA_PATH = "data/geo_all_channels.csv"
-OUT = "outputs"
+OUT = "outputs_v2"
 MODEL_PATH = f"{OUT}/mmm_model.binpb"
 os.makedirs(OUT, exist_ok=True)
 
@@ -124,9 +124,9 @@ else:
     # n_chains=10, n_adapt=1000, n_burnin=500, n_keep=1000
     mmm.sample_posterior(
         n_chains=4,
-        n_adapt=500,
-        n_burnin=500,
-        n_keep=500,
+        n_adapt=1000,
+        n_burnin=1000,
+        n_keep=1000,
         seed=1,
     )
 
